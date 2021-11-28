@@ -1,0 +1,11 @@
+# Toolchain artifacts
+*.log
+
+# Build cache
+/.cache
+
+# Build artifacts
+/dist
+
+# Third-party dependencies
+/node_modules
