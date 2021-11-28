@@ -1,3 +1,8 @@
 body {
-  font-family: sans-serif;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
 }
