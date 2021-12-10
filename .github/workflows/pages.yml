@@ -1,0 +1,55 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Get Yarn cache directory
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Use Yarn cache
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Generate static files
+        run: yarn build
+
+      - name: Init new repo in dist folder and commit generated files
+        env:
+          GH_BRANCH: "gh-pages"
+          GH_REPO: "browser-homepage"
+          GH_TOKEN: ${{ github.token }}
+          GH_ACTOR: ${{ github.actor }}
+        run: |
+          git config --local user.email "${GH_ACTOR}@users.noreply.github.com"
+          git config --local user.name "${GH_ACTOR}"
+
+          if ! git checkout gh-pages; then
+            git checkout --orphan gh-pages
+          fi
+
+          git rm -rf --ignore-unmatch -- .
+          mv dist static
+
+          git add -- static
+          git commit -m "Deploy"
+
+          git push origin gh-pages
