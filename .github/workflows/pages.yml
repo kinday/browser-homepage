@@ -30,7 +30,7 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Generate static files
-        run: yarn build
+        run: yarn build --public-url /browser-homepage/
 
       - name: Deploy
         env:
