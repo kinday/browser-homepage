@@ -32,7 +32,7 @@ jobs:
       - name: Generate static files
         run: yarn build
 
-      - name: Init new repo in dist folder and commit generated files
+      - name: Deploy
         env:
           GH_BRANCH: "gh-pages"
           GH_REPO: "browser-homepage"
