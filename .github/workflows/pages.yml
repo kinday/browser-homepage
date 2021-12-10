@@ -47,9 +47,9 @@ jobs:
           fi
 
           git rm -rf --ignore-unmatch -- .
-          mv dist static
+          mv dist docs
 
-          git add -- static
+          git add -- docs
           git commit -m "Deploy"
 
           git push origin gh-pages
