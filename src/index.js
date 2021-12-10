@@ -8,7 +8,7 @@ if (searchInput) {
     for (const child of docLinksList.children) {
       child.classList.remove("hidden")
 
-      if (child.textContent.indexOf(value) < 0) {
+      if (child.textContent.toLowerCase().indexOf(value.toLowerCase()) < 0) {
         child.classList.add("hidden")
       }
     }
