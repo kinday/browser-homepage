@@ -2,14 +2,39 @@
   box-sizing: border-box;
 }
 
+html {
+  margin: unset;
+}
+
 body {
   display: flex;
   flex-direction: column;
   font-family: monospace;
   font-size: 20px;
   margin: unset;
-  padding: 1em;
   min-height: 100vh;
+}
+
+main {
+  padding: 1rem;
+}
+
+#search {
+  appearance: none;
+  border: unset;
+  border-bottom-color: currentColor;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+#search:focus {
+  background-color: hsl(180, 100%, 90%);
+  outline: unset;
 }
 
 .hidden {
@@ -17,7 +42,8 @@ body {
 }
 
 footer {
-  font-size: 0.85em;
+  font-size: 0.85rem;
   margin-top: auto;
+  padding: 1rem;
   text-align: right;
 }
