@@ -1,3 +1,8 @@
+navigator.serviceWorker.register(
+  new URL("/service-worker.js", import.meta.url),
+  { type: "module" }
+)
+
 const searchInput = document.querySelector("#search")
 const lists = document.querySelectorAll(".js-searchable")
 
