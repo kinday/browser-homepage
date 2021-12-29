@@ -2,7 +2,7 @@
 *.log
 
 # Build cache
-/.cache
+/.parcel-cache
 
 # Build artifacts
 /dist
