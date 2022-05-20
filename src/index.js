@@ -3,18 +3,35 @@ navigator.serviceWorker.register(
   { type: "module" }
 )
 
+function fuzzyFind(query) {
+  const queryParts = query.split("")
+  return function find(input) {
+    let index = 0
+
+    for (const queryPart of queryParts) {
+      index = input.indexOf(queryPart, index + 1)
+
+      if (index < 0) {
+        return false
+      }
+    }
+
+    return true
+  }
+}
+
 const searchInput = document.querySelector("#search")
 const lists = document.querySelectorAll(".js-searchable")
 
 if (searchInput) {
   searchInput.addEventListener("input", () => {
-    const value = searchInput.value
+    const find = fuzzyFind(searchInput.value.toLowerCase())
 
     for (const list of lists) {
       for (const child of list.children) {
-        child.classList.remove("hidden")
-
-        if (child.textContent.toLowerCase().indexOf(value.toLowerCase()) < 0) {
+        if (find(child.textContent.toLowerCase())) {
+          child.classList.remove("hidden")
+        } else {
           child.classList.add("hidden")
         }
       }
