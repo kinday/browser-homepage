@@ -72,6 +72,18 @@
         "name": "URQL"
       },
       {
+        "href": "https://vitest.dev/guide/",
+        "name": "Vitest"
+      },
+      {
+        "href": "https://vitest.dev/api/",
+        "name": "Vitest API"
+      },
+      {
+        "href": "https://vitest.dev/config/",
+        "name": "Vitest Configuration"
+      },
+      {
         "href": "https://webpack.js.org/api/",
         "name": "Webpack API"
       },
