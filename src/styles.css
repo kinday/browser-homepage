@@ -1,9 +1,29 @@
+:root {
+  --bg-color: hsl(210deg 40% 100%);
+  --bg-accent-color: hsl(210deg 40% 96%);
+  --fg-color: hsl(0deg 100% 0%);
+  --primary-color: hsl(224deg 76% 48%);
+  --primary-accent-color: hsl(217deg 91% 60%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: hsl(222deg 47% 0%);
+    --bg-accent-color: hsl(222deg 47% 11%);
+    --fg-color: hsl(0deg 100% 100%);
+    --primary-color: hsl(213deg 94% 68%);
+    --primary-accent-color: hsl(217deg 91% 60%);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   margin: unset;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
 }
 
 body {
@@ -15,16 +35,28 @@ body {
   min-height: 100vh;
 }
 
+a:link,
+a:visited {
+  color: var(--primary-color);
+}
+
+a:hover,
+a:active {
+  color: var(--primary-accent-color);
+}
+
 main {
   padding: 1rem;
 }
 
 #search {
   appearance: none;
+  background-color: inherit;
   border: unset;
   border-bottom-color: currentColor;
   border-bottom-style: solid;
   border-bottom-width: 2px;
+  color: inherit;
   display: block;
   font-family: inherit;
   font-size: 1rem;
@@ -33,7 +65,7 @@ main {
 }
 
 #search:focus {
-  background-color: hsl(180, 100%, 90%);
+  background-color: var(--bg-accent-color);
   outline: unset;
 }
 
