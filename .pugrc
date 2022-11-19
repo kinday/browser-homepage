@@ -52,6 +52,10 @@
         "name": "React"
       },
       {
+        "href": "https://reactrouter.com/en/main",
+        "name": "React Router"
+      },
+      {
         "href": "https://tailwindcss.com/docs",
         "name": "Tailwind"
       },
