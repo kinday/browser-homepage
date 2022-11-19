@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@parcel/service-worker': ^2.0.1
-  parcel: ^2.0.0
+  '@parcel/service-worker': ^2.8.0
+  parcel: ^2.8.0
 
 dependencies:
   '@parcel/service-worker': 2.8.0
