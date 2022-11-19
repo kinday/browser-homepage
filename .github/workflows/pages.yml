@@ -26,7 +26,11 @@ jobs:
         run: pnpm test
 
       - name: Generate static files
-        run: pnpm build --public-url /browser-homepage/
+        env:
+          APP_VERSTION: ${{ github.sha }}
+        run: |
+          pnpm build --public-url /browser-homepage/
+          echo "${APP_VERSION}" > dist/version
 
       - name: Deploy
         env:

@@ -1,9 +1,9 @@
 import { fuzzyFind } from "./fuzzy-find"
+import { maybeUpdateServiceWorker } from "./maybe-update-service-worker"
 
-navigator.serviceWorker.register(
-  new URL("/service-worker.js", import.meta.url),
-  { type: "module" }
-)
+navigator.serviceWorker
+  .register(new URL("/service-worker.js", import.meta.url), { type: "module" })
+  .then(maybeUpdateServiceWorker)
 
 const searchInput = document.querySelector("#search")
 const lists = document.querySelectorAll(".js-searchable")
