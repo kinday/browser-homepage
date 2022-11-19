@@ -1,7 +1,7 @@
 export async function maybeUpdateServiceWorker(registration) {
-  const publicUrl = process.env.PUBLIC_URL ?? ""
+  const publicUrl = process.env.PUBLIC_URL ?? "/"
   try {
-    const response = await fetch(publicUrl + "/version")
+    const response = await fetch(publicUrl + "version")
 
     if (!response.ok) {
       throw new Error("Failed to fetch remote version")
