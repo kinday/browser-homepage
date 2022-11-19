@@ -1,0 +1,80 @@
+{
+  "locals": {
+    "cheatSheets": [
+      {
+        "href": "https://tmuxcheatsheet.com/",
+        "name": "tmux"
+      },
+      {
+        "href": "https://vim.rtorr.com/",
+        "name": "vim"
+      }
+    ],
+    "docs": [
+      {
+        "href": "https://docs.ansible.com/ansible/latest/",
+        "name": "Ansible"
+      },
+      {
+        "href": "https://formik.org/docs/overview",
+        "name": "Formik"
+      },
+      {
+        "href": "https://docs.github.com/en/actions",
+        "name": "GitHub Actions"
+      },
+      {
+        "href": "https://www.graphql-code-generator.com/docs/getting-started",
+        "name": "GraphQL Codegen"
+      },
+      {
+        "href": "https://nextjs.org/docs/getting-started",
+        "name": "Next.js"
+      },
+      {
+        "href": "https://nexusjs.org/docs/",
+        "name": "Nexus"
+      },
+      {
+        "href": "https://www.prisma.io/docs/reference/api-reference/command-reference",
+        "name": "Prisma CLI"
+      },
+      {
+        "href": "https://www.prisma.io/docs/reference/api-reference/prisma-client-reference",
+        "name": "Prisma Client"
+      },
+      {
+        "href": "https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference",
+        "name": "Prisma Schema"
+      },
+      {
+        "href": "https://reactjs.org/docs/getting-started.html",
+        "name": "React"
+      },
+      {
+        "href": "https://tailwindcss.com/docs",
+        "name": "Tailwind"
+      },
+      {
+        "href": "https://www.terraform.io/language",
+        "name": "Terraform Language"
+      },
+      {
+        "href": "https://doc.traefik.io/traefik/",
+        "name": "Traefik"
+      },
+      {
+        "href": "https://formidable.com/open-source/urql/docs/",
+        "name": "URQL"
+      },
+      {
+        "href": "https://webpack.js.org/api/",
+        "name": "Webpack API"
+      },
+      {
+        "href": "https://webpack.js.org/configuration/",
+        "name": "Webpack Configuration"
+      }
+    ]
+  }
+}

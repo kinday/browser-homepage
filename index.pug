@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    title about:docs
+    meta(charset="UTF-8")
+    link(href="src/styles.css", rel="stylesheet")
+
+  body
+    div#app
+      input#search(placeholder="about:docs", type="search")
+      main
+        h2 Cheat Sheets
+        ul.js-searchable
+          each cheatSheet in cheatSheets
+            li: a(href=cheatSheet.href)= cheatSheet.name
+
+        h2 Documentation
+        ul.js-searchable
+          each doc in docs
+            li: a(href=doc.href)= doc.name
+
+    footer
+      a(href="https://github.com/kinday/browser-homepage") Source
+
+    script(type="module", src="src/index.js")
