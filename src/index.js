@@ -9,7 +9,7 @@ function fuzzyFind(query) {
     let index = 0
 
     for (const queryPart of queryParts) {
-      index = input.indexOf(queryPart, index + 1)
+      index = input.indexOf(queryPart, index)
 
       if (index < 0) {
         return false
