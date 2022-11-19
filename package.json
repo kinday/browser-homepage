@@ -4,12 +4,16 @@
   "description": "A page to be used when empty tab is open",
   "scripts": {
     "build": "parcel build index.pug",
-    "start": "parcel index.pug --open"
+    "start": "parcel index.pug --open",
+    "test": "vitest --run"
   },
   "dependencies": {
     "@parcel/service-worker": "^2.8.0",
     "@parcel/transformer-pug": "^2.8.0",
     "parcel": "^2.8.0"
   },
-  "packageManager": "pnpm@7.16.1"
+  "packageManager": "pnpm@7.16.1",
+  "devDependencies": {
+    "vitest": "^0.25.2"
+  }
 }
