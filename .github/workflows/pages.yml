@@ -27,7 +27,7 @@ jobs:
 
       - name: Generate static files
         env:
-          APP_VERSTION: ${{ github.sha }}
+          APP_VERSION: ${{ github.sha }}
           PUBLIC_URL: "/browser-homepage/"
         run: |
           pnpm build --public-url "${PUBLIC_URL}"
