@@ -36,6 +36,10 @@
         "name": "Nexus"
       },
       {
+        "href": "https://nodejs.org/dist/latest-v18.x/docs/api/",
+        "name": "Node.js LTS"
+      },
+      {
         "href": "https://www.prisma.io/docs/reference/api-reference/command-reference",
         "name": "Prisma CLI"
       },
