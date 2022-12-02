@@ -20,6 +20,10 @@
         "name": "Formik"
       },
       {
+        "href": "https://direnv.net/man/direnv-stdlib.1.html",
+        "name": "direnv stdlib"
+      },
+      {
         "href": "https://docs.github.com/en/actions",
         "name": "GitHub Actions"
       },
