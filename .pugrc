@@ -64,6 +64,10 @@
         "name": "React Router"
       },
       {
+        "href": "https://doc.rust-lang.org/std/index.html",
+        "name": "Rust stdlib"
+      },
+      {
         "href": "https://tailwindcss.com/docs",
         "name": "Tailwind"
       },
