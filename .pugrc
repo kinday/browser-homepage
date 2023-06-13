@@ -32,6 +32,10 @@
         "name": "GraphQL Codegen"
       },
       {
+        "href": "https://neo4j.com/docs/api/javascript-driver/current/",
+        "name": "Neo4j Driver"
+      },
+      {
         "href": "https://nextjs.org/docs/getting-started",
         "name": "Next.js"
       },
